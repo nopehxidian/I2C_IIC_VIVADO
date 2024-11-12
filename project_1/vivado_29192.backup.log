@@ -1,0 +1,2028 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Fri Nov  1 22:15:26 2024
+# Process ID: 29192
+# Current directory: D:/findjob/project_1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11860 D:\findjob\project_1\project_1.xpr
+# Log file: D:/findjob/project_1/vivado.log
+# Journal file: D:/findjob/project_1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/findjob/project_1/project_1.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/vivado/Vivado/2019.1/data/ip'.
+update_compile_order -fileset sources_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'I2C_top_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj I2C_top_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module I2C_top
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'i2c_scl' is not allowed [D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v:71]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/findjob/project_1/project_1.srcs/sim_1/new/I2C_top_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module I2C_top_tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+"xelab -wto 78618b26c6384b86a3b48550143a7297 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot I2C_top_tb_behav xil_defaultlib.I2C_top_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/vivado/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 78618b26c6384b86a3b48550143a7297 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot I2C_top_tb_behav xil_defaultlib.I2C_top_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'i_master_type' [D:/findjob/project_1/project_1.srcs/sim_1/new/I2C_top_tb.v:40]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'i_master_vaild' [D:/findjob/project_1/project_1.srcs/sim_1/new/I2C_top_tb.v:41]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.I2C_top
+Compiling module xil_defaultlib.I2C_top_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot I2C_top_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "I2C_top_tb_behav -key {Behavioral:sim_1:Functional:I2C_top_tb} -tclbatch {I2C_top_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source I2C_top_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'I2C_top_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:09 . Memory (MB): peak = 871.930 ; gain = 24.773
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'I2C_top_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj I2C_top_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module I2C_top
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'i2c_scl' is not allowed [D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v:71]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/findjob/project_1/project_1.srcs/sim_1/new/I2C_top_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module I2C_top_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+"xelab -wto 78618b26c6384b86a3b48550143a7297 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot I2C_top_tb_behav xil_defaultlib.I2C_top_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/vivado/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 78618b26c6384b86a3b48550143a7297 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot I2C_top_tb_behav xil_defaultlib.I2C_top_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'i_master_type' [D:/findjob/project_1/project_1.srcs/sim_1/new/I2C_top_tb.v:40]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'i_master_vaild' [D:/findjob/project_1/project_1.srcs/sim_1/new/I2C_top_tb.v:41]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.I2C_top
+Compiling module xil_defaultlib.I2C_top_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot I2C_top_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "I2C_top_tb_behav -key {Behavioral:sim_1:Functional:I2C_top_tb} -tclbatch {I2C_top_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source I2C_top_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'I2C_top_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 914.719 ; gain = 34.148
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+current_wave_config {Untitled 2}
+Untitled 2
+add_wave {{/I2C_top_tb/test}} 
+run 1000 us
+Stopped at time : 5450 ns : File "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" Line 87
+run 1000 us
+Stopped at time : 5550 ns : File "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" Line 87
+run 1000 us
+Stopped at time : 5650 ns : File "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" Line 87
+run 1000 us
+Stopped at time : 5750 ns : File "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" Line 87
+run 1000 us
+Stopped at time : 5850 ns : File "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" Line 87
+remove_bps -file {D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v} -line 87
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'I2C_top_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj I2C_top_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module I2C_top
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'i2c_scl' is not allowed [D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v:71]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/findjob/project_1/project_1.srcs/sim_1/new/I2C_top_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module I2C_top_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+"xelab -wto 78618b26c6384b86a3b48550143a7297 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot I2C_top_tb_behav xil_defaultlib.I2C_top_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/vivado/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 78618b26c6384b86a3b48550143a7297 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot I2C_top_tb_behav xil_defaultlib.I2C_top_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'i_master_type' [D:/findjob/project_1/project_1.srcs/sim_1/new/I2C_top_tb.v:40]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'i_master_vaild' [D:/findjob/project_1/project_1.srcs/sim_1/new/I2C_top_tb.v:41]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.I2C_top
+Compiling module xil_defaultlib.I2C_top_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot I2C_top_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "I2C_top_tb_behav -key {Behavioral:sim_1:Functional:I2C_top_tb} -tclbatch {I2C_top_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source I2C_top_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'I2C_top_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 928.609 ; gain = 0.801
+run 1000 us
+run 1000 us
+current_wave_config {Untitled 3}
+Untitled 3
+add_wave {{/I2C_top_tb/test}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+restart: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 929.348 ; gain = 0.000
+run 1000 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'I2C_top_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj I2C_top_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module I2C_top
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'i2c_scl' is not allowed [D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v:71]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/findjob/project_1/project_1.srcs/sim_1/new/I2C_top_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module I2C_top_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+"xelab -wto 78618b26c6384b86a3b48550143a7297 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot I2C_top_tb_behav xil_defaultlib.I2C_top_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/vivado/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 78618b26c6384b86a3b48550143a7297 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot I2C_top_tb_behav xil_defaultlib.I2C_top_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-3180] cannot find port 'i_clk' on this module [D:/findjob/project_1/project_1.srcs/sim_1/new/I2C_top_tb.v:34]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'I2C_top_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj I2C_top_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module I2C_top
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'i2c_scl' is not allowed [D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v:71]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/findjob/project_1/project_1.srcs/sim_1/new/I2C_top_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module I2C_top_tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+"xelab -wto 78618b26c6384b86a3b48550143a7297 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot I2C_top_tb_behav xil_defaultlib.I2C_top_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/vivado/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 78618b26c6384b86a3b48550143a7297 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot I2C_top_tb_behav xil_defaultlib.I2C_top_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'i_master_type' [D:/findjob/project_1/project_1.srcs/sim_1/new/I2C_top_tb.v:40]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'i_master_vaild' [D:/findjob/project_1/project_1.srcs/sim_1/new/I2C_top_tb.v:41]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.I2C_top
+Compiling module xil_defaultlib.I2C_top_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot I2C_top_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "I2C_top_tb_behav -key {Behavioral:sim_1:Functional:I2C_top_tb} -tclbatch {I2C_top_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source I2C_top_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'I2C_top_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 997.141 ; gain = 1.180
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 1000 us
+run 1000 us
+current_wave_config {Untitled 4}
+Untitled 4
+add_wave {{/I2C_top_tb/test}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+restart: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 999.672 ; gain = 0.000
+run 1000 us
+run 1000 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'I2C_top_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj I2C_top_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module I2C_top
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'i2c_scl' is not allowed [D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v:71]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/findjob/project_1/project_1.srcs/sim_1/new/I2C_top_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module I2C_top_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+"xelab -wto 78618b26c6384b86a3b48550143a7297 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot I2C_top_tb_behav xil_defaultlib.I2C_top_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/vivado/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 78618b26c6384b86a3b48550143a7297 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot I2C_top_tb_behav xil_defaultlib.I2C_top_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'i_master_type' [D:/findjob/project_1/project_1.srcs/sim_1/new/I2C_top_tb.v:40]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'i_master_vaild' [D:/findjob/project_1/project_1.srcs/sim_1/new/I2C_top_tb.v:41]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.I2C_top
+Compiling module xil_defaultlib.I2C_top_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot I2C_top_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "I2C_top_tb_behav -key {Behavioral:sim_1:Functional:I2C_top_tb} -tclbatch {I2C_top_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source I2C_top_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'I2C_top_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 1002.211 ; gain = 0.000
+run 1000 us
+run 1000 us
+current_wave_config {Untitled 5}
+Untitled 5
+add_wave {{/I2C_top_tb/test}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+restart: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 1002.211 ; gain = 0.000
+run 1000 us
+run 1000 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'I2C_top_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj I2C_top_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module I2C_top
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'i2c_scl' is not allowed [D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v:71]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/findjob/project_1/project_1.srcs/sim_1/new/I2C_top_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module I2C_top_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+"xelab -wto 78618b26c6384b86a3b48550143a7297 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot I2C_top_tb_behav xil_defaultlib.I2C_top_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/vivado/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 78618b26c6384b86a3b48550143a7297 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot I2C_top_tb_behav xil_defaultlib.I2C_top_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'i_master_type' [D:/findjob/project_1/project_1.srcs/sim_1/new/I2C_top_tb.v:40]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'i_master_vaild' [D:/findjob/project_1/project_1.srcs/sim_1/new/I2C_top_tb.v:41]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.I2C_top
+Compiling module xil_defaultlib.I2C_top_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot I2C_top_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "I2C_top_tb_behav -key {Behavioral:sim_1:Functional:I2C_top_tb} -tclbatch {I2C_top_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source I2C_top_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'I2C_top_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 1002.594 ; gain = 0.000
+current_wave_config {Untitled 6}
+Untitled 6
+add_wave {{/I2C_top_tb/test}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+restart: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 1002.594 ; gain = 0.000
+run 1000 us
+run 1000 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'I2C_top_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj I2C_top_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module I2C_top
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'i2c_scl' is not allowed [D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v:71]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/findjob/project_1/project_1.srcs/sim_1/new/I2C_top_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module I2C_top_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+"xelab -wto 78618b26c6384b86a3b48550143a7297 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot I2C_top_tb_behav xil_defaultlib.I2C_top_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/vivado/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 78618b26c6384b86a3b48550143a7297 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot I2C_top_tb_behav xil_defaultlib.I2C_top_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'i_master_type' [D:/findjob/project_1/project_1.srcs/sim_1/new/I2C_top_tb.v:40]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'i_master_vaild' [D:/findjob/project_1/project_1.srcs/sim_1/new/I2C_top_tb.v:41]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.I2C_top
+Compiling module xil_defaultlib.I2C_top_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot I2C_top_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "I2C_top_tb_behav -key {Behavioral:sim_1:Functional:I2C_top_tb} -tclbatch {I2C_top_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source I2C_top_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'I2C_top_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 1006.660 ; gain = 0.000
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 1000 us
+run 1000 us
+current_wave_config {Untitled 7}
+Untitled 7
+add_wave {{/I2C_top_tb/test}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+restart: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 1006.660 ; gain = 0.000
+run 1000 us
+run 1000 us
+run 1000 us
+run 1000 us
+add_bp {D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v} 83
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 1000 us
+Stopped at time : 0 fs : File "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" Line 83
+add_bp {D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v} 89
+run 1000 us
+Stopped at time : 0 fs : File "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" Line 89
+run 1000 us
+Stopped at time : 50 ns : File "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" Line 83
+run 1000 us
+Stopped at time : 50 ns : File "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" Line 89
+run 1000 us
+Stopped at time : 150 ns : File "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" Line 83
+run 1000 us
+Stopped at time : 150 ns : File "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" Line 89
+run 1000 us
+Stopped at time : 250 ns : File "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" Line 83
+run 1000 us
+Stopped at time : 250 ns : File "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" Line 89
+run 1000 us
+Stopped at time : 350 ns : File "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" Line 83
+run 1000 us
+Stopped at time : 350 ns : File "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" Line 89
+run 1000 us
+Stopped at time : 450 ns : File "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" Line 83
+run 1000 us
+Stopped at time : 450 ns : File "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" Line 89
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'I2C_top_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj I2C_top_tb_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+"xelab -wto 78618b26c6384b86a3b48550143a7297 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot I2C_top_tb_behav xil_defaultlib.I2C_top_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/vivado/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 78618b26c6384b86a3b48550143a7297 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot I2C_top_tb_behav xil_defaultlib.I2C_top_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'i_master_type' [D:/findjob/project_1/project_1.srcs/sim_1/new/I2C_top_tb.v:40]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'i_master_vaild' [D:/findjob/project_1/project_1.srcs/sim_1/new/I2C_top_tb.v:41]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "I2C_top_tb_behav -key {Behavioral:sim_1:Functional:I2C_top_tb} -tclbatch {I2C_top_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source I2C_top_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Stopped at time : 0 fs : File "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" Line 83
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'I2C_top_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 1006.660 ; gain = 0.000
+run 1000 us
+Stopped at time : 0 fs : File "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" Line 89
+current_wave_config {Untitled 8}
+Untitled 8
+add_wave {{/I2C_top_tb/test}} 
+run 1000 us
+Stopped at time : 50 ns : File "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" Line 83
+run 1000 us
+Stopped at time : 50 ns : File "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" Line 89
+run 1000 us
+Stopped at time : 150 ns : File "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" Line 83
+add_bp {D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v} 88
+run 1000 us
+Stopped at time : 150 ns : File "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" Line 89
+run 1000 us
+Stopped at time : 250 ns : File "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" Line 83
+run 1000 us
+Stopped at time : 250 ns : File "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" Line 89
+remove_bps -file {D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v} -line 89
+run 1000 us
+Stopped at time : 350 ns : File "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" Line 83
+run 1000 us
+Stopped at time : 450 ns : File "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" Line 83
+run 1000 us
+Stopped at time : 550 ns : File "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" Line 83
+run 1000 us
+Stopped at time : 650 ns : File "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" Line 83
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'I2C_top_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj I2C_top_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module I2C_top
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'i2c_scl' is not allowed [D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v:71]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/findjob/project_1/project_1.srcs/sim_1/new/I2C_top_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module I2C_top_tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+"xelab -wto 78618b26c6384b86a3b48550143a7297 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot I2C_top_tb_behav xil_defaultlib.I2C_top_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/vivado/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 78618b26c6384b86a3b48550143a7297 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot I2C_top_tb_behav xil_defaultlib.I2C_top_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'i_master_type' [D:/findjob/project_1/project_1.srcs/sim_1/new/I2C_top_tb.v:40]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'i_master_vaild' [D:/findjob/project_1/project_1.srcs/sim_1/new/I2C_top_tb.v:41]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.I2C_top
+Compiling module xil_defaultlib.I2C_top_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot I2C_top_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "I2C_top_tb_behav -key {Behavioral:sim_1:Functional:I2C_top_tb} -tclbatch {I2C_top_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+WARNING: [Simulator 45-24] Previous breakpoint at line 83 in file 'D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v' not restored because it is no longer a breakable line.
+source I2C_top_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'I2C_top_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 1006.660 ; gain = 0.000
+current_wave_config {Untitled 9}
+Untitled 9
+add_wave {{/I2C_top_tb/test}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+restart: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 1006.660 ; gain = 0.000
+run 1000 us
+run 1000 us
+run 1000 us
+add_bp {D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v} 85
+run 1000 us
+Stopped at time : 3000050 ns : File "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" Line 85
+run 1000 us
+Stopped at time : 3000150 ns : File "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" Line 85
+run 1000 us
+Stopped at time : 3000250 ns : File "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" Line 85
+add_bp {D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v} 81
+run 1000 us
+Stopped at time : 3000350 ns : File "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" Line 85
+run 1000 us
+Stopped at time : 3000450 ns : File "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" Line 85
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'I2C_top_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj I2C_top_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module I2C_top
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'i2c_scl' is not allowed [D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v:71]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/findjob/project_1/project_1.srcs/sim_1/new/I2C_top_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module I2C_top_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+"xelab -wto 78618b26c6384b86a3b48550143a7297 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot I2C_top_tb_behav xil_defaultlib.I2C_top_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/vivado/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 78618b26c6384b86a3b48550143a7297 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot I2C_top_tb_behav xil_defaultlib.I2C_top_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'i_master_type' [D:/findjob/project_1/project_1.srcs/sim_1/new/I2C_top_tb.v:40]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'i_master_vaild' [D:/findjob/project_1/project_1.srcs/sim_1/new/I2C_top_tb.v:41]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.I2C_top
+Compiling module xil_defaultlib.I2C_top_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot I2C_top_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "I2C_top_tb_behav -key {Behavioral:sim_1:Functional:I2C_top_tb} -tclbatch {I2C_top_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+WARNING: [Simulator 45-24] Previous breakpoint at line 88 in file 'D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v' not restored because it is no longer a breakable line.
+WARNING: [Simulator 45-24] Previous breakpoint at line 81 in file 'D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v' not restored because it is no longer a breakable line.
+source I2C_top_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'I2C_top_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 1007.883 ; gain = 1.207
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+current_wave_config {Untitled 10}
+Untitled 10
+add_wave {{/I2C_top_tb/test}} 
+run 1000 us
+Stopped at time : 5050 ns : File "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" Line 85
+run 1000 us
+Stopped at time : 5150 ns : File "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" Line 85
+remove_bps -file {D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v} -line 85
+run 1000 us
+run 1000 us
+add_bp {D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v} 107
+add_bp {D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v} 89
+run 1000 us
+run 1000 us
+add_bp {D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v} 103
+add_bp {D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v} 104
+add_bp {D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v} 105
+add_bp {D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v} 108
+run 1000 us
+Stopped at time : 4005250 ns : File "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" Line 103
+run 1000 us
+Stopped at time : 4005250 ns : File "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" Line 104
+run 1000 us
+Stopped at time : 4005350 ns : File "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" Line 103
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'I2C_top_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj I2C_top_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module I2C_top
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'i2c_scl' is not allowed [D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v:71]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/findjob/project_1/project_1.srcs/sim_1/new/I2C_top_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module I2C_top_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+"xelab -wto 78618b26c6384b86a3b48550143a7297 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot I2C_top_tb_behav xil_defaultlib.I2C_top_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/vivado/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 78618b26c6384b86a3b48550143a7297 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot I2C_top_tb_behav xil_defaultlib.I2C_top_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'i_master_type' [D:/findjob/project_1/project_1.srcs/sim_1/new/I2C_top_tb.v:40]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'i_master_vaild' [D:/findjob/project_1/project_1.srcs/sim_1/new/I2C_top_tb.v:41]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.I2C_top
+Compiling module xil_defaultlib.I2C_top_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot I2C_top_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "I2C_top_tb_behav -key {Behavioral:sim_1:Functional:I2C_top_tb} -tclbatch {I2C_top_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source I2C_top_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'I2C_top_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 1008.277 ; gain = 0.395
+current_wave_config {Untitled 11}
+Untitled 11
+add_wave {{/I2C_top_tb/test}} 
+run 1000 us
+Stopped at time : 5050 ns : File "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" Line 103
+remove_bps -file {D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v} -line 103
+remove_bps -all
+run 1000 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'I2C_top_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj I2C_top_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module I2C_top
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'i2c_scl' is not allowed [D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v:71]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/findjob/project_1/project_1.srcs/sim_1/new/I2C_top_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module I2C_top_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+"xelab -wto 78618b26c6384b86a3b48550143a7297 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot I2C_top_tb_behav xil_defaultlib.I2C_top_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/vivado/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 78618b26c6384b86a3b48550143a7297 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot I2C_top_tb_behav xil_defaultlib.I2C_top_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'i_master_type' [D:/findjob/project_1/project_1.srcs/sim_1/new/I2C_top_tb.v:40]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'i_master_vaild' [D:/findjob/project_1/project_1.srcs/sim_1/new/I2C_top_tb.v:41]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.I2C_top
+Compiling module xil_defaultlib.I2C_top_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot I2C_top_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "I2C_top_tb_behav -key {Behavioral:sim_1:Functional:I2C_top_tb} -tclbatch {I2C_top_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source I2C_top_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'I2C_top_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 1008.910 ; gain = 0.000
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 1000 us
+current_wave_config {Untitled 12}
+Untitled 12
+add_wave {{/I2C_top_tb/test}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+restart: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 1008.910 ; gain = 0.000
+run 1000 us
+run 1000 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'I2C_top_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj I2C_top_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module I2C_top
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'i2c_scl' is not allowed [D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v:71]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/findjob/project_1/project_1.srcs/sim_1/new/I2C_top_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module I2C_top_tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+"xelab -wto 78618b26c6384b86a3b48550143a7297 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot I2C_top_tb_behav xil_defaultlib.I2C_top_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/vivado/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 78618b26c6384b86a3b48550143a7297 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot I2C_top_tb_behav xil_defaultlib.I2C_top_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'i_master_type' [D:/findjob/project_1/project_1.srcs/sim_1/new/I2C_top_tb.v:40]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'i_master_vaild' [D:/findjob/project_1/project_1.srcs/sim_1/new/I2C_top_tb.v:41]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.I2C_top
+Compiling module xil_defaultlib.I2C_top_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot I2C_top_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "I2C_top_tb_behav -key {Behavioral:sim_1:Functional:I2C_top_tb} -tclbatch {I2C_top_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source I2C_top_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'I2C_top_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 1008.910 ; gain = 0.000
+current_wave_config {Untitled 13}
+Untitled 13
+add_wave {{/I2C_top_tb/test}} 
+run 1000 us
+run 1000 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'I2C_top_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj I2C_top_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module I2C_top
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'i2c_scl' is not allowed [D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v:71]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/findjob/project_1/project_1.srcs/sim_1/new/I2C_top_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module I2C_top_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+"xelab -wto 78618b26c6384b86a3b48550143a7297 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot I2C_top_tb_behav xil_defaultlib.I2C_top_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/vivado/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 78618b26c6384b86a3b48550143a7297 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot I2C_top_tb_behav xil_defaultlib.I2C_top_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'i_master_type' [D:/findjob/project_1/project_1.srcs/sim_1/new/I2C_top_tb.v:40]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'i_master_vaild' [D:/findjob/project_1/project_1.srcs/sim_1/new/I2C_top_tb.v:41]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.I2C_top
+Compiling module xil_defaultlib.I2C_top_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot I2C_top_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "I2C_top_tb_behav -key {Behavioral:sim_1:Functional:I2C_top_tb} -tclbatch {I2C_top_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source I2C_top_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'I2C_top_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 1011.082 ; gain = 0.000
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+current_wave_config {Untitled 14}
+Untitled 14
+add_wave {{/I2C_top_tb/test}} 
+run 1000 us
+run 1000 us
+run 1000 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'I2C_top_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj I2C_top_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module I2C_top
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'i2c_scl' is not allowed [D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v:71]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/findjob/project_1/project_1.srcs/sim_1/new/I2C_top_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module I2C_top_tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+"xelab -wto 78618b26c6384b86a3b48550143a7297 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot I2C_top_tb_behav xil_defaultlib.I2C_top_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/vivado/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 78618b26c6384b86a3b48550143a7297 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot I2C_top_tb_behav xil_defaultlib.I2C_top_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'i_master_type' [D:/findjob/project_1/project_1.srcs/sim_1/new/I2C_top_tb.v:40]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'i_master_vaild' [D:/findjob/project_1/project_1.srcs/sim_1/new/I2C_top_tb.v:41]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.I2C_top
+Compiling module xil_defaultlib.I2C_top_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot I2C_top_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "I2C_top_tb_behav -key {Behavioral:sim_1:Functional:I2C_top_tb} -tclbatch {I2C_top_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source I2C_top_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'I2C_top_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 1011.445 ; gain = 0.363
+current_wave_config {Untitled 15}
+Untitled 15
+add_wave {{/I2C_top_tb/test}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+restart: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 1011.449 ; gain = 0.004
+run 1000 us
+run 1000 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'I2C_top_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj I2C_top_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module I2C_top
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'i2c_scl' is not allowed [D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v:71]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/findjob/project_1/project_1.srcs/sim_1/new/I2C_top_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module I2C_top_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+"xelab -wto 78618b26c6384b86a3b48550143a7297 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot I2C_top_tb_behav xil_defaultlib.I2C_top_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/vivado/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 78618b26c6384b86a3b48550143a7297 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot I2C_top_tb_behav xil_defaultlib.I2C_top_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'i_master_type' [D:/findjob/project_1/project_1.srcs/sim_1/new/I2C_top_tb.v:40]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'i_master_vaild' [D:/findjob/project_1/project_1.srcs/sim_1/new/I2C_top_tb.v:41]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.I2C_top
+Compiling module xil_defaultlib.I2C_top_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot I2C_top_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "I2C_top_tb_behav -key {Behavioral:sim_1:Functional:I2C_top_tb} -tclbatch {I2C_top_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source I2C_top_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'I2C_top_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 1016.039 ; gain = 4.590
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 1000 us
+run 1000 us
+current_wave_config {Untitled 16}
+Untitled 16
+add_wave {{/I2C_top_tb/test}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+restart: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 1016.039 ; gain = 0.000
+run 1000 us
+run 1000 us
+run 1000 us
+add_bp {D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v} 171
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 1000 us
+Stopped at time : 8550 ns : File "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" Line 171
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 1000 us
+Stopped at time : 8550 ns : File "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" Line 171
+run 1000 us
+Stopped at time : 9350 ns : File "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" Line 171
+run 1000 us
+Stopped at time : 10150 ns : File "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" Line 171
+run 1000 us
+Stopped at time : 10950 ns : File "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" Line 171
+run 1000 us
+Stopped at time : 11750 ns : File "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" Line 171
+run 1000 us
+Stopped at time : 12550 ns : File "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" Line 171
+run 1000 us
+Stopped at time : 13350 ns : File "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" Line 171
+run 1000 us
+Stopped at time : 14150 ns : File "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" Line 171
+run 1000 us
+Stopped at time : 14950 ns : File "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" Line 171
+run 1000 us
+Stopped at time : 15750 ns : File "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" Line 171
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 1000 us
+Stopped at time : 8550 ns : File "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" Line 171
+run 1000 us
+Stopped at time : 9350 ns : File "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" Line 171
+remove_bps -file {D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v} -line 171
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'I2C_top_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj I2C_top_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module I2C_top
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'i2c_scl' is not allowed [D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v:71]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/findjob/project_1/project_1.srcs/sim_1/new/I2C_top_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module I2C_top_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+"xelab -wto 78618b26c6384b86a3b48550143a7297 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot I2C_top_tb_behav xil_defaultlib.I2C_top_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/vivado/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 78618b26c6384b86a3b48550143a7297 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot I2C_top_tb_behav xil_defaultlib.I2C_top_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-3180] cannot find port 'clk' on this module [D:/findjob/project_1/project_1.srcs/sim_1/new/I2C_top_tb.v:34]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'I2C_top_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+"xvlog --incr --relax -prj I2C_top_tb_vlog.prj"
+INFO: [Common 17-344] 'run_program' was cancelled
+INFO: [Vivado 12-5357] 'compile' step aborted
+INFO: [Common 17-344] 'launch_simulation' was cancelled
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'I2C_top_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj I2C_top_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module I2C_top
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'i2c_scl' is not allowed [D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v:71]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/findjob/project_1/project_1.srcs/sim_1/new/I2C_top_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module I2C_top_tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+"xelab -wto 78618b26c6384b86a3b48550143a7297 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot I2C_top_tb_behav xil_defaultlib.I2C_top_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/vivado/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 78618b26c6384b86a3b48550143a7297 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot I2C_top_tb_behav xil_defaultlib.I2C_top_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'i_master_type' [D:/findjob/project_1/project_1.srcs/sim_1/new/I2C_top_tb.v:40]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'i_master_vaild' [D:/findjob/project_1/project_1.srcs/sim_1/new/I2C_top_tb.v:41]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.I2C_top
+Compiling module xil_defaultlib.I2C_top_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot I2C_top_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "I2C_top_tb_behav -key {Behavioral:sim_1:Functional:I2C_top_tb} -tclbatch {I2C_top_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source I2C_top_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'I2C_top_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 1016.730 ; gain = 0.000
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+current_wave_config {}
+WARNING: [Wavedata 42-16] Error Unable to get wave configuration ''.
+Untitled 17
+add_wave {{/I2C_top_tb/test}} 
+run 1000 us
+run 1000 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'I2C_top_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj I2C_top_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module I2C_top
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'i2c_scl' is not allowed [D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v:71]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/findjob/project_1/project_1.srcs/sim_1/new/I2C_top_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module I2C_top_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+"xelab -wto 78618b26c6384b86a3b48550143a7297 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot I2C_top_tb_behav xil_defaultlib.I2C_top_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/vivado/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 78618b26c6384b86a3b48550143a7297 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot I2C_top_tb_behav xil_defaultlib.I2C_top_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'i_master_type' [D:/findjob/project_1/project_1.srcs/sim_1/new/I2C_top_tb.v:40]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'i_master_vaild' [D:/findjob/project_1/project_1.srcs/sim_1/new/I2C_top_tb.v:41]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.I2C_top
+Compiling module xil_defaultlib.I2C_top_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot I2C_top_tb_behav
+
+****** Webtalk v2019.1 (64-bit)
+  **** SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+  **** IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source D:/findjob/project_1/project_1.sim/sim_1/behav/xsim/xsim.dir/I2C_top_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Sat Nov  2 00:06:48 2024...
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "I2C_top_tb_behav -key {Behavioral:sim_1:Functional:I2C_top_tb} -tclbatch {I2C_top_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source I2C_top_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'I2C_top_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 1035.297 ; gain = 0.000
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+current_wave_config {Untitled 18}
+Untitled 18
+add_wave {{/I2C_top_tb/test}} 
+run 1000 us
+run 1000 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'I2C_top_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj I2C_top_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module I2C_top
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'i2c_scl' is not allowed [D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v:71]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/findjob/project_1/project_1.srcs/sim_1/new/I2C_top_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module I2C_top_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+"xelab -wto 78618b26c6384b86a3b48550143a7297 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot I2C_top_tb_behav xil_defaultlib.I2C_top_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/vivado/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 78618b26c6384b86a3b48550143a7297 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot I2C_top_tb_behav xil_defaultlib.I2C_top_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'i_master_type' [D:/findjob/project_1/project_1.srcs/sim_1/new/I2C_top_tb.v:40]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'i_master_vaild' [D:/findjob/project_1/project_1.srcs/sim_1/new/I2C_top_tb.v:41]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.I2C_top
+Compiling module xil_defaultlib.I2C_top_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot I2C_top_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "I2C_top_tb_behav -key {Behavioral:sim_1:Functional:I2C_top_tb} -tclbatch {I2C_top_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source I2C_top_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'I2C_top_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 1035.297 ; gain = 0.000
+current_wave_config {Untitled 19}
+Untitled 19
+add_wave {{/I2C_top_tb/test}} 
+run 1000 us
+run 1000 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'I2C_top_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj I2C_top_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module I2C_top
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'i2c_scl' is not allowed [D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v:71]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/findjob/project_1/project_1.srcs/sim_1/new/I2C_top_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module I2C_top_tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+"xelab -wto 78618b26c6384b86a3b48550143a7297 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot I2C_top_tb_behav xil_defaultlib.I2C_top_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/vivado/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 78618b26c6384b86a3b48550143a7297 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot I2C_top_tb_behav xil_defaultlib.I2C_top_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'i_master_type' [D:/findjob/project_1/project_1.srcs/sim_1/new/I2C_top_tb.v:40]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'i_master_vaild' [D:/findjob/project_1/project_1.srcs/sim_1/new/I2C_top_tb.v:41]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.I2C_top
+Compiling module xil_defaultlib.I2C_top_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot I2C_top_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "I2C_top_tb_behav -key {Behavioral:sim_1:Functional:I2C_top_tb} -tclbatch {I2C_top_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source I2C_top_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'I2C_top_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 1269.922 ; gain = 0.000
+current_wave_config {Untitled 20}
+Untitled 20
+add_wave {{/I2C_top_tb/test}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+restart: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 1269.922 ; gain = 0.000
+run 1000 us
+run 1000 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'I2C_top_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj I2C_top_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module I2C_top
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'i2c_scl' is not allowed [D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v:71]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/findjob/project_1/project_1.srcs/sim_1/new/I2C_top_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module I2C_top_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+"xelab -wto 78618b26c6384b86a3b48550143a7297 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot I2C_top_tb_behav xil_defaultlib.I2C_top_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/vivado/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 78618b26c6384b86a3b48550143a7297 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot I2C_top_tb_behav xil_defaultlib.I2C_top_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'i_master_type' [D:/findjob/project_1/project_1.srcs/sim_1/new/I2C_top_tb.v:40]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'i_master_vaild' [D:/findjob/project_1/project_1.srcs/sim_1/new/I2C_top_tb.v:41]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.I2C_top
+Compiling module xil_defaultlib.I2C_top_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot I2C_top_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "I2C_top_tb_behav -key {Behavioral:sim_1:Functional:I2C_top_tb} -tclbatch {I2C_top_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source I2C_top_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'I2C_top_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 1269.922 ; gain = 0.000
+current_wave_config {Untitled 21}
+Untitled 21
+add_wave {{/I2C_top_tb/test}} 
+run 1000 us
+run 1000 us
+add_bp {D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v} 182
+remove_bps -file {D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v} -line 182
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'I2C_top_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj I2C_top_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module I2C_top
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'i2c_scl' is not allowed [D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v:71]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/findjob/project_1/project_1.srcs/sim_1/new/I2C_top_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module I2C_top_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+"xelab -wto 78618b26c6384b86a3b48550143a7297 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot I2C_top_tb_behav xil_defaultlib.I2C_top_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/vivado/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 78618b26c6384b86a3b48550143a7297 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot I2C_top_tb_behav xil_defaultlib.I2C_top_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'i_master_type' [D:/findjob/project_1/project_1.srcs/sim_1/new/I2C_top_tb.v:40]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'i_master_vaild' [D:/findjob/project_1/project_1.srcs/sim_1/new/I2C_top_tb.v:41]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.I2C_top
+Compiling module xil_defaultlib.I2C_top_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot I2C_top_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "I2C_top_tb_behav -key {Behavioral:sim_1:Functional:I2C_top_tb} -tclbatch {I2C_top_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source I2C_top_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'I2C_top_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 1269.922 ; gain = 0.000
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 1000 us
+current_wave_config {Untitled 22}
+Untitled 22
+add_wave {{/I2C_top_tb/test}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 1000 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'I2C_top_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj I2C_top_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module I2C_top
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'i2c_scl' is not allowed [D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v:71]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/findjob/project_1/project_1.srcs/sim_1/new/I2C_top_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module I2C_top_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+"xelab -wto 78618b26c6384b86a3b48550143a7297 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot I2C_top_tb_behav xil_defaultlib.I2C_top_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/vivado/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 78618b26c6384b86a3b48550143a7297 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot I2C_top_tb_behav xil_defaultlib.I2C_top_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'i_master_type' [D:/findjob/project_1/project_1.srcs/sim_1/new/I2C_top_tb.v:40]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'i_master_vaild' [D:/findjob/project_1/project_1.srcs/sim_1/new/I2C_top_tb.v:41]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.I2C_top
+Compiling module xil_defaultlib.I2C_top_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot I2C_top_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "I2C_top_tb_behav -key {Behavioral:sim_1:Functional:I2C_top_tb} -tclbatch {I2C_top_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source I2C_top_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'I2C_top_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 1269.922 ; gain = 0.000
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 1000 us
+run 1000 us
+run 1000 us
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+current_wave_config {Untitled 23}
+Untitled 23
+add_wave {{/I2C_top_tb/test}} 
+run 1000 us
+add_bp {D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v} 182
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 1000 us
+Stopped at time : 5 us : File "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" Line 182
+run 1000 us
+Stopped at time : 5100 ns : File "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" Line 182
+run 1000 us
+Stopped at time : 5200 ns : File "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" Line 182
+run 1000 us
+Stopped at time : 5300 ns : File "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" Line 182
+run 1000 us
+Stopped at time : 5400 ns : File "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" Line 182
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'I2C_top_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj I2C_top_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module I2C_top
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'i2c_scl' is not allowed [D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v:71]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/findjob/project_1/project_1.srcs/sim_1/new/I2C_top_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module I2C_top_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+"xelab -wto 78618b26c6384b86a3b48550143a7297 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot I2C_top_tb_behav xil_defaultlib.I2C_top_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/vivado/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 78618b26c6384b86a3b48550143a7297 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot I2C_top_tb_behav xil_defaultlib.I2C_top_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'i_master_type' [D:/findjob/project_1/project_1.srcs/sim_1/new/I2C_top_tb.v:40]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'i_master_vaild' [D:/findjob/project_1/project_1.srcs/sim_1/new/I2C_top_tb.v:41]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.I2C_top
+Compiling module xil_defaultlib.I2C_top_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot I2C_top_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "I2C_top_tb_behav -key {Behavioral:sim_1:Functional:I2C_top_tb} -tclbatch {I2C_top_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source I2C_top_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'I2C_top_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 1269.922 ; gain = 0.000
+current_wave_config {Untitled 24}
+Untitled 24
+add_wave {{/I2C_top_tb/test}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 1000 us
+Stopped at time : 5 us : File "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" Line 182
+run 1000 us
+Stopped at time : 5100 ns : File "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" Line 182
+run 1000 us
+Stopped at time : 5200 ns : File "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" Line 182
+run 1000 us
+Stopped at time : 5300 ns : File "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" Line 182
+remove_bps -file {D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v} -line 182
+run 1000 us
+add_bp {D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v} 185
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'I2C_top_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj I2C_top_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module I2C_top
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'i2c_scl' is not allowed [D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v:71]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/findjob/project_1/project_1.srcs/sim_1/new/I2C_top_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module I2C_top_tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+"xelab -wto 78618b26c6384b86a3b48550143a7297 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot I2C_top_tb_behav xil_defaultlib.I2C_top_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/vivado/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 78618b26c6384b86a3b48550143a7297 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot I2C_top_tb_behav xil_defaultlib.I2C_top_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'i_master_type' [D:/findjob/project_1/project_1.srcs/sim_1/new/I2C_top_tb.v:40]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'i_master_vaild' [D:/findjob/project_1/project_1.srcs/sim_1/new/I2C_top_tb.v:41]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.I2C_top
+Compiling module xil_defaultlib.I2C_top_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot I2C_top_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "I2C_top_tb_behav -key {Behavioral:sim_1:Functional:I2C_top_tb} -tclbatch {I2C_top_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source I2C_top_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'I2C_top_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 1269.922 ; gain = 0.000
+current_wave_config {Untitled 25}
+Untitled 25
+add_wave {{/I2C_top_tb/test}} 
+run 1000 us
+Stopped at time : 5 us : File "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" Line 185
+remove_bps -file {D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v} -line 185
+run 1000 us
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'I2C_top_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj I2C_top_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module I2C_top
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'i2c_scl' is not allowed [D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v:71]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/findjob/project_1/project_1.srcs/sim_1/new/I2C_top_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module I2C_top_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+"xelab -wto 78618b26c6384b86a3b48550143a7297 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot I2C_top_tb_behav xil_defaultlib.I2C_top_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/vivado/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 78618b26c6384b86a3b48550143a7297 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot I2C_top_tb_behav xil_defaultlib.I2C_top_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'i_master_type' [D:/findjob/project_1/project_1.srcs/sim_1/new/I2C_top_tb.v:40]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'i_master_vaild' [D:/findjob/project_1/project_1.srcs/sim_1/new/I2C_top_tb.v:41]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.I2C_top
+Compiling module xil_defaultlib.I2C_top_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot I2C_top_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "I2C_top_tb_behav -key {Behavioral:sim_1:Functional:I2C_top_tb} -tclbatch {I2C_top_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source I2C_top_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'I2C_top_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 1269.922 ; gain = 0.000
+current_wave_config {Untitled 26}
+Untitled 26
+add_wave {{/I2C_top_tb/test}} 
+run 1000 us
+run 1000 us
+add_bp {D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v} 182
+run 1000 us
+Stopped at time : 2001050 ns : File "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" Line 182
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 1000 us
+Stopped at time : 5050 ns : File "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" Line 182
+run 1000 us
+Stopped at time : 5150 ns : File "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" Line 182
+run 1000 us
+Stopped at time : 5250 ns : File "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" Line 182
+run 1000 us
+Stopped at time : 5350 ns : File "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" Line 182
+add_bp {D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v} 184
+remove_bps -file {D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v} -line 182
+run 1000 us
+Stopped at time : 5450 ns : File "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" Line 184
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 1000 us
+Stopped at time : 5450 ns : File "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" Line 184
+run 1000 us
+Stopped at time : 5650 ns : File "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" Line 184
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'I2C_top_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj I2C_top_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module I2C_top
+WARNING: [VRFC 10-3676] redeclaration of ansi port 'i2c_scl' is not allowed [D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v:71]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/findjob/project_1/project_1.srcs/sim_1/new/I2C_top_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module I2C_top_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+"xelab -wto 78618b26c6384b86a3b48550143a7297 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot I2C_top_tb_behav xil_defaultlib.I2C_top_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/vivado/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 78618b26c6384b86a3b48550143a7297 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot I2C_top_tb_behav xil_defaultlib.I2C_top_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'i_master_type' [D:/findjob/project_1/project_1.srcs/sim_1/new/I2C_top_tb.v:40]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'i_master_vaild' [D:/findjob/project_1/project_1.srcs/sim_1/new/I2C_top_tb.v:41]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.I2C_top
+Compiling module xil_defaultlib.I2C_top_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot I2C_top_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/findjob/project_1/project_1.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "I2C_top_tb_behav -key {Behavioral:sim_1:Functional:I2C_top_tb} -tclbatch {I2C_top_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+source I2C_top_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'I2C_top_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 1269.922 ; gain = 0.000
+current_wave_config {Untitled 27}
+Untitled 27
+add_wave {{/I2C_top_tb/test}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 1000 us
+Stopped at time : 5550 ns : File "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" Line 184
+run 1000 us
+Stopped at time : 5750 ns : File "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" Line 184
+remove_bps -file {D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v} -line 184
+add_bp {D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v} 184
+run 1000 us
+Stopped at time : 5950 ns : File "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" Line 184
+run 1000 us
+Stopped at time : 6150 ns : File "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" Line 184
+run 1000 us
+Stopped at time : 6350 ns : File "D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v" Line 184
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Sat Nov  2 00:39:07 2024...

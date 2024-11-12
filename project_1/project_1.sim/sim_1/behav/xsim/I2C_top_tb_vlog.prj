@@ -1,0 +1,12 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../project_1.srcs/sources_1/new/24xx64_Verilog_Model/24LC64.v" \
+"../../../../project_1.srcs/sources_1/new/I2C_top.v" \
+"../../../../project_1.srcs/sources_1/new/eeprom.v" \
+"../../../../project_1.srcs/sim_1/new/I2C_top_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

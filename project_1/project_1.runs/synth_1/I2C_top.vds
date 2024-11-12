@@ -1,0 +1,322 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Thu Nov  7 23:25:02 2024
+# Process ID: 19436
+# Current directory: D:/findjob/project_1/project_1.runs/synth_1
+# Command line: vivado.exe -log I2C_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source I2C_top.tcl
+# Log file: D:/findjob/project_1/project_1.runs/synth_1/I2C_top.vds
+# Journal file: D:/findjob/project_1/project_1.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source I2C_top.tcl -notrace
+Command: synth_design -top I2C_top -part xc7z010clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 9376 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 563.625 ; gain = 185.875
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'I2C_top' [D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v:23]
+	Parameter st_idle bound to: 0 - type: integer 
+	Parameter st_start bound to: 1 - type: integer 
+	Parameter st_address bound to: 2 - type: integer 
+	Parameter st_reg_address bound to: 3 - type: integer 
+	Parameter st_wire_data bound to: 4 - type: integer 
+	Parameter st_read_data bound to: 5 - type: integer 
+	Parameter st_restart bound to: 6 - type: integer 
+	Parameter st_read bound to: 7 - type: integer 
+	Parameter st_end bound to: 8 - type: integer 
+WARNING: [Synth 8-6014] Unused sequential element i_clk_reg was removed.  [D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v:89]
+WARNING: [Synth 8-6014] Unused sequential element st_ack_reg was removed.  [D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v:116]
+WARNING: [Synth 8-6014] Unused sequential element sda_fuzhi_reg was removed.  [D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v:178]
+INFO: [Synth 8-6155] done synthesizing module 'I2C_top' (1#1) [D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v:23]
+WARNING: [Synth 8-3331] design I2C_top has unconnected port i_master_vaild
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 627.289 ; gain = 249.539
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 627.289 ; gain = 249.539
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 627.289 ; gain = 249.539
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Synth 8-802] inferred FSM for state register 'st_current_reg' in module 'I2C_top'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 st_idle |                              000 |                         00000000
+                st_start |                              001 |                         00000001
+              st_address |                              010 |                         00000010
+          st_reg_address |                              011 |                         00000011
+            st_wire_data |                              100 |                         00000100
+            st_read_data |                              101 |                         00000101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'st_current_reg' using encoding 'sequential' in module 'I2C_top'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 627.289 ; gain = 249.539
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 1     
++---Registers : 
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input      6 Bit        Muxes := 1     
+	  19 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 8     
+	   3 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module I2C_top 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 1     
++---Registers : 
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input      6 Bit        Muxes := 1     
+	  19 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 8     
+	   3 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3331] design I2C_top has unconnected port i_master_vaild
+WARNING: [Synth 8-3332] Sequential element (FSM_sequential_st_current_reg[2]) is unused and will be removed from module I2C_top.
+WARNING: [Synth 8-3332] Sequential element (FSM_sequential_st_current_reg[1]) is unused and will be removed from module I2C_top.
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'st_sda_reg/Q' [D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v:363]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'VCC' [D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v:363]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v:363]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'st_cnt_reg[7]/Q' [D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v:394]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v:394]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v:394]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'st_cnt_reg[6]/Q' [D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v:394]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v:394]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v:394]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'st_cnt_reg[5]/Q' [D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v:394]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v:394]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v:394]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'st_cnt_reg[4]/Q' [D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v:394]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v:394]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v:394]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'st_cnt_reg[3]/Q' [D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v:394]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v:394]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v:394]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'st_cnt_reg[2]/Q' [D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v:394]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v:394]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v:394]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'st_cnt_reg[1]/Q' [D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v:394]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v:394]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v:394]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'st_cnt_reg[0]/Q' [D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v:394]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v:394]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v:394]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'st_turn_reg/Q' [D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v:414]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v:414]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v:414]
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 768.973 ; gain = 391.223
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 768.973 ; gain = 391.223
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 768.973 ; gain = 391.223
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 769.875 ; gain = 392.125
+---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin cnt_clk[5] with 1st driver pin 'cnt_clk_reg[5]__0/Q' [D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v:90]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin cnt_clk[5] with 2nd driver pin 'cnt_clk_reg[5]/Q' [D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v:167]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin cnt_clk[4] with 1st driver pin 'cnt_clk_reg[4]__0/Q' [D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v:90]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin cnt_clk[4] with 2nd driver pin 'cnt_clk_reg[4]/Q' [D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v:167]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin cnt_clk[3] with 1st driver pin 'cnt_clk_reg[3]__0/Q' [D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v:90]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin cnt_clk[3] with 2nd driver pin 'cnt_clk_reg[3]/Q' [D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v:167]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin cnt_clk[2] with 1st driver pin 'cnt_clk_reg[2]__0/Q' [D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v:90]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin cnt_clk[2] with 2nd driver pin 'cnt_clk_reg[2]/Q' [D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v:167]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin cnt_clk[1] with 1st driver pin 'cnt_clk_reg[1]__0/Q' [D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v:90]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin cnt_clk[1] with 2nd driver pin 'cnt_clk_reg[1]/Q' [D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v:167]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin cnt_clk[0] with 1st driver pin 'cnt_clk_reg[0]__0/Q' [D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v:90]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin cnt_clk[0] with 2nd driver pin 'cnt_clk_reg[0]/Q' [D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v:167]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin i2c_sda_OBUF with 1st driver pin 'r_iic_sda_reg__0/Q' [D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v:70]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin i2c_sda_OBUF with 2nd driver pin 'r_iic_sda_reg/Q' [D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v:306]
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        7|Failed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 769.875 ; gain = 392.125
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 769.875 ; gain = 392.125
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 769.875 ; gain = 392.125
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 769.875 ; gain = 392.125
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 769.875 ; gain = 392.125
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+------+------+
+|      |Cell  |Count |
++------+------+------+
+|1     |BUFG  |     1|
+|2     |LUT1  |     2|
+|3     |LUT2  |     3|
+|4     |LUT3  |     2|
+|5     |LUT4  |     2|
+|6     |LUT5  |     2|
+|7     |LUT6  |     3|
+|8     |FDCE  |     9|
+|9     |FDPE  |     3|
+|10    |FDRE  |     6|
+|11    |IBUF  |     4|
+|12    |OBUF  |     1|
+|13    |OBUFT |     1|
++------+------+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |    39|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 769.875 ; gain = 392.125
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 44 critical warnings and 7 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 769.875 ; gain = 392.125
+Synthesis Optimization Complete : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 769.875 ; gain = 392.125
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 887.695 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+11 Infos, 7 Warnings, 44 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 887.695 ; gain = 534.805
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 887.695 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'D:/findjob/project_1/project_1.runs/synth_1/I2C_top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file I2C_top_utilization_synth.rpt -pb I2C_top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Nov  7 23:25:14 2024...

@@ -1,0 +1,7 @@
+Running: xsim.dir/iic_vlg_tst_behav/xsimk.exe -simmode gui -wdb iic_vlg_tst_behav.wdb -simrunnum 0 -socket 59060
+Design successfully loaded
+Design Loading Memory Usage: 7468 KB (Peak: 7468 KB)
+Design Loading CPU Usage: 15 ms
+Simulation completed
+Simulation Memory Usage: 9388 KB (Peak: 9388 KB)
+Simulation CPU Usage: 15 ms

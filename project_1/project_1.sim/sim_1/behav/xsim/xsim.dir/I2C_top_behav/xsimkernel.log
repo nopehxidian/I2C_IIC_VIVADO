@@ -1,0 +1,7 @@
+Running: xsim.dir/I2C_top_behav/xsimk.exe -simmode gui -wdb I2C_top_behav.wdb -simrunnum 0 -socket 53244
+Design successfully loaded
+Design Loading Memory Usage: 7440 KB (Peak: 7440 KB)
+Design Loading CPU Usage: 0 ms
+Simulation completed
+Simulation Memory Usage: 8032 KB (Peak: 8032 KB)
+Simulation CPU Usage: 0 ms

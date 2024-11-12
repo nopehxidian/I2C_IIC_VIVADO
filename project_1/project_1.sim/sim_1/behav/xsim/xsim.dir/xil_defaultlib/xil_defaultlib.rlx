@@ -1,0 +1,11 @@
+0.6
+2019.1
+May 24 2019
+15:06:07
+D:/findjob/project_1/project_1.sim/sim_1/behav/xsim/glbl.v,1558713910,verilog,,,,glbl,,,,,,,,
+D:/findjob/project_1/project_1.srcs/sim_1/new/I2C_top_tb.v,1730994906,verilog,,,,I2C_top_tb,,,,,,,,
+D:/findjob/project_1/project_1.srcs/sim_1/new/iic_tb.v,1730976887,verilog,,,,iic_vlg_tst,,,,,,,,
+D:/findjob/project_1/project_1.srcs/sources_1/new/24xx64_Verilog_Model/24LC64.v,1730992216,verilog,,D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v,,M24LC64,,,,,,,,
+D:/findjob/project_1/project_1.srcs/sources_1/new/I2C_top.v,1730995328,verilog,,D:/findjob/project_1/project_1.srcs/sources_1/new/eeprom.v,,I2C_top,,,,,,,,
+D:/findjob/project_1/project_1.srcs/sources_1/new/eeprom.v,1730994231,verilog,,D:/findjob/project_1/project_1.srcs/sim_1/new/I2C_top_tb.v,,eeprom,,,,,,,,
+D:/findjob/project_1/project_1.srcs/sources_1/new/iic.v,1730973339,verilog,,D:/findjob/project_1/project_1.srcs/sim_1/new/iic_tb.v,,iic,,,,,,,,
